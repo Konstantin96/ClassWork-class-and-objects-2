@@ -31,25 +31,27 @@ int main() {
 		Rectangle *p;
 		p = new Rectangle[5];
 		double xa, ya, xb, yb, xc, yc, xd, yd;
+		double XCenter, YCenter, sideA, sideB;
 		int i = 0;
 		if (!in) {
 			cerr << "file open error" << endl;
 		}
 		else {
 			while (!in.eof()) {
-				in >> xa >> ya >> xb >> yb >> xc >> yc >> xd >> yd;
-				Rectangle R(xa, ya, xb, yb, xc, yc, xd, yd);
+				//in >> xa >> ya >> xb >> yb >> xc >> yc >> xd >> yd;
+				in >> XCenter >> YCenter >> sideA >> sideA;
+				Rectangle R(XCenter, YCenter, sideA, sideA);
 				p[i++] = R;
 			}
 		}
-		for (int k = 0; k < i; k++)
-		{
-			p[k].move('x', 5);
-			out << p[k].getXA() << "\t" << p[k].getYA() << "\t" <<
-				p[k].getXB() << "\t" << p[k].getYB() << "\t" <<
-				p[k].getXC() << "\t" << p[k].getYC() << "\t" <<
-				p[k].getXD() << "\t" << p[k].getYD() << endl;
-		}
+	//	for (int k = 0; k < i; k++)
+
+	//		p[k].resize(2, 5);
+			out << p[0].getXA() << "\t" << p[0].getYA() << "\t" <<
+				p[0].getXB() << "\t" << p[0].getYB() << "\t" <<
+				p[0].getXC() << "\t" << p[0].getYC() << "\t" <<
+				p[0].getXD() << "\t" << p[0].getYD() << endl;
+		
 		out.close();
 		system("pause");
 		return 0;

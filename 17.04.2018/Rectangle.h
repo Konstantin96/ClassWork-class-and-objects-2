@@ -33,6 +33,8 @@ public:
 	double getYC() { return c.getY(); }
 	double getXD() { return d.getX(); }
 	double getYD() { return d.getY(); }
+	double getSideA() { return sideA; }
+	double getSideB() { return sideB; }
 	//methods
 	void move(char direction, double value);
 	void coordinates(double XCenter, double YCenter, double sideA, double sideB);

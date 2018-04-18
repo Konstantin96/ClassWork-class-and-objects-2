@@ -8,17 +8,17 @@ Rectangle::Rectangle(double xa, double ya, double xb, double yb, double xc, doub
 }
 //peremeshenie v dol' osey
 Rectangle::Rectangle(double XCenter, double YCenter, double sideA, double sideB) {
-	a.getX = XCenter - sideA / 2;
-	a.getY = YCenter - sideB / 2;
+	a.getX() = XCenter - sideA / 2;
+	a.getY() = YCenter - sideB / 2;
 
-	b.getX = XCenter - sideA / 2;
-	b.getY = YCenter + sideB / 2;
+	b.getX() = XCenter - sideA / 2;
+	b.getY() = YCenter + sideB / 2;
 
-	c.getX = XCenter + sideA / 2;
-	c.getY = YCenter + sideB / 2;
+	c.getX() = XCenter + sideA / 2;
+	c.getY() = YCenter + sideB / 2;
 
-	d.getX = XCenter + sideA / 2;
-	d.getY = YCenter - sideB / 2;
+	d.getX() = XCenter + sideA / 2;
+	d.getY() = YCenter - sideB / 2;
 }
 //izmenenie razmera Rectangle
 void Rectangle::move(char direction, double value) {
@@ -39,17 +39,17 @@ void Rectangle::move(char direction, double value) {
 }
 
 void Rectangle::coordinates(double XCenter, double YCenter, double sideA, double sideB) {
-	a.getX = XCenter - sideA / 2;
-	a.getY = YCenter - sideB / 2;
+	a.getX() = XCenter - sideA / 2;
+	a.getY() = YCenter - sideB / 2;
 
-	b.getX = XCenter - sideA / 2;
-	b.getY = YCenter + sideB / 2;
+	b.getX() = XCenter - sideA / 2;
+	b.getY() = YCenter + sideB / 2;
 
-	c.getX = XCenter + sideA / 2;
-	c.getY = YCenter + sideB / 2;
+	c.getX() = XCenter + sideA / 2;
+	c.getY() = YCenter + sideB / 2;
 
-	d.getX = XCenter + sideA / 2;
-	d.getY = YCenter - sideB / 2;
+	d.getX() = XCenter + sideA / 2;
+	d.getY() = YCenter - sideB / 2;
 }
 
 void Rectangle::resize(double X, double Y) {
