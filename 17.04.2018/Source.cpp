@@ -1,5 +1,5 @@
 #include "Vector.h"
-#include "Point.h"
+#include "Rectangle.h"
 #include <time.h>
 #include <fstream>
 
@@ -44,6 +44,7 @@ int main() {
 		}
 		for (int k = 0; k < i; k++)
 		{
+			p[k].move('x', 5);
 			out << p[k].getXA() << "\t" << p[k].getYA() << "\t" <<
 				p[k].getXB() << "\t" << p[k].getYB() << "\t" <<
 				p[k].getXC() << "\t" << p[k].getYC() << "\t" <<

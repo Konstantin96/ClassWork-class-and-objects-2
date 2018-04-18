@@ -1,6 +1,8 @@
 #pragma once
+#include <iostream>
 class Rectangle {
 private:
+	double sideA, sideB;
 	class Point {
 	private:
 		double x;
@@ -8,21 +10,21 @@ private:
 	public:
 		Point() = default;
 		Point(double x, double y) :x(x), y(y) {}
-		double getX() { return x; }
-		double getY() { return y; }
+		double &getX() { return x; }
+		double &getY() { return y; }
 		void setXY(double x, double y) {
 			this->x = x;
 			this->y = y;
 		}
-	}a, b, c, d;
+	}a, b, c, d,center;
 public:
+	//default constukt
 	Rectangle() = default;
-	Rectangle(double xa, double ya, double xb, double yb, double xc, double yc, double xd, double yd) {
-		a.setXY(xa, ya);
-		b.setXY(xb, yb);
-		c.setXY(xc, yc);
-		d.setXY(xd, yd);
-	}
+	//parameter construktor
+	Rectangle(double xa, double ya, double xb, double yb, double xc, double yc, double xd, double yd);
+	
+	Rectangle(double XCenter, double YCenter, double sideA, double sideB);
+	//accessors
 	double getXA() { return a.getX(); }
 	double getYA() { return a.getY(); }
 	double getXB() { return b.getX(); }
@@ -31,5 +33,8 @@ public:
 	double getYC() { return c.getY(); }
 	double getXD() { return d.getX(); }
 	double getYD() { return d.getY(); }
-
+	//methods
+	void move(char direction, double value);
+	void coordinates(double XCenter, double YCenter, double sideA, double sideB);
+	void resize(double X, double Y);
 };
